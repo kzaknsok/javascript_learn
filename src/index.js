@@ -1,10 +1,22 @@
-import "./styles.css";
+// constによる変数宣言とオブジェクトの上書き
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+// const val = {
+//   name: "にしおか",
+//   age: 35,
+// };
+// console.log(val);
+
+//オブジェクトの上書きと追加
+const val = {
+  name: "にしおか",
+  age: 35,
+};
+val.name = "Nishioka";
+val.address = "Osaka"
+console.log(val);
+
+//配列の上書きと追加
+const val2 = ['dog', 'cat'];
+val2[0] = "bird";
+val2.push("monkey");
+console.log(val2);
