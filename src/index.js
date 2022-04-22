@@ -106,7 +106,7 @@
  * indexを引数にもけることで配列のインデックスを管理できる
  * if文を使って出力の仕方を変えられる
  */
-const nameArr = ["ごろう", "たいすけ", "かず"];
+// const nameArr = ["ごろう", "たいすけ", "かず"];
 
 // const nameArr2 = nameArr.map((name) => {
 //   return name;
@@ -116,14 +116,14 @@ const nameArr = ["ごろう", "たいすけ", "かず"];
 
 // nameArr.map((name) => console.log(name));
 // nameArr.map((name, index) => console.log(`${index + 1}番目は${name}さんです。`));
-const newNameArr = nameArr.map((name) => {
-  if (name === "かず") {
-    return name;
-  } else {
-    return `${name}さん`;
-  }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "かず") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
 
 /**
  * filter
@@ -134,3 +134,53 @@ console.log(newNameArr);
 //   return num % 2 === 0;
 // });
 // console.log(newNumArr);
+
+/**
+ * ３項演算子
+ * 可読性低下する、Reactで使用するが要注意
+ */
+//記述、以下...
+// 条件　？　条件がtrueの時の出力 : 条件がfalseの時の出力
+// const val1 = 1 > 0 ? "trueです" : "falseです";
+// console.log(val1);
+
+// const num = "1300";
+// console.log(num.toLocaleString());
+// toLocaleString は数値を３桁区切りにしてくれる
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力して下さい。";
+// // typeofはデータ型を判別してくれる
+// // 数値=numberが入力されている時は.toLocalString(true) : 文字列の時はfalseのメッセージ
+// console.log(formattedNum);
+
+// num1 num2を受け取ってreturnとして足し算してくれる変数checkSumの定義
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? '100を超えています' :　'許容範囲内です';
+// };
+// console.log(checkSum(50,50));
+
+/**
+ * 論理演算子　$$ ||
+ * よく解説されるパターン
+ const flag1 = true;
+ const flag2 = true;
+ 
+ if (flag1 || flag2){
+   console.log("flag1かflag2はtrueです");
+ }
+ if (flag1 && flag2){
+   console.log("flag1とflag2はtrueです");
+ }
+ */
+
+// 「||」は左がfalseの時に右を返すという意味
+//右がtrue ならそのまま実行
+//  const num10 = 100;
+//  const fee = num10 || "金額が未設定です";
+//  console.log(fee);
+
+// 「&&」は左がtrueなら左の値を返す
+// const num11 = null;
+// const fee2 = num11 && "何か設定されています";
+// console.log(fee2);
